@@ -3,113 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Almasicily - Prodotti Siciliani</title>
+    <title>Almasicily - Valorizzazione PMI Siciliane</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'almasicily-grey': '#4a4a4a',
+                        'almasicily-green': '#8bc34a',
+                        'almasicily-light-green': '#c5e1a5'
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         body {
             font-family: 'Arial', sans-serif;
         }
     </style>
 </head>
-<body>
-    <!-- Intestazione -->
-    <header class="bg-green-800 text-white p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="text-2xl font-bold">Almasicily</div>
+<body class="text-almasicily-grey">
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgNTAiIHdpZHRoPSIyMDAiIGhlaWdodD0iNTAiPgogICAgPHRleHQgeD0iMCIgeT0iMzUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzNSIgZmlsbD0iIzRhNGE0YSI+YWxtYXNpY2lseTwvdGV4dD4KICAgIDxjaXJjbGUgY3g9IjE4MCIgY3k9IjI1IiByPSI1IiBmaWxsPSIjOGJjMzRhIj48L2NpcmNsZT4KPC9zdmc+" alt="Almasicily Logo" class="h-10">
             <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#missione">Missione</a></li>
-                    <li><a href="#prodotti">Prodotti</a></li>
-                    <li><a href="#contatti">Contatti</a></li>
+                <ul class="flex space-x-6">
+                    <li><a href="#home" class="hover:text-almasicily-green">Home</a></li>
+                    <li><a href="#missione" class="hover:text-almasicily-green">Missione</a></li>
+                    <li><a href="#modello" class="hover:text-almasicily-green">Modello di Business</a></li>
+                    <li><a href="#prodotti" class="hover:text-almasicily-green">Prodotti</a></li>
+                    <li><a href="#contatti" class="hover:text-almasicily-green">Contatti</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Home -->
-    <section id="home" class="bg-green-600 text-white py-16 text-center">
-        <h1 class="text-4xl font-bold mb-4">Potenziare le PMI Siciliane</h1>
-        <p class="text-xl mb-8">
-            Sosteniamo le piccole imprese siciliane, 
-            promuovendo l'artigianato e il cibo gourmet
-        </p>
-        <a href="#prodotti" class="bg-white text-green-800 px-6 py-3 rounded">
-            Scopri i Prodotti
-        </a>
+    <!-- Home Section -->
+    <section id="home" class="bg-gradient-to-r from-almasicily-light-green to-white py-16">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold mb-6 text-almasicily-grey">Rivoluzionare l'Economia delle PMI Siciliane</h1>
+            <p class="text-xl max-w-3xl mx-auto mb-10">
+                Almasicily trasforma le piccole imprese agricole in campioni globali, 
+                abbattendo le barriere di mercato e creando nuove opportunità di crescita.
+            </p>
+            <div class="flex justify-center space-x-6">
+                <a href="#modello" class="bg-almasicily-green text-white px-8 py-3 rounded-full hover:bg-green-600 transition">
+                    Scopri il Nostro Modello
+                </a>
+                <a href="#prodotti" class="border-2 border-almasicily-green text-almasicily-grey px-8 py-3 rounded-full hover:bg-almasicily-light-green transition">
+                    Catalogo Prodotti
+                </a>
+            </div>
+        </div>
     </section>
 
-    <!-- Missione -->
-    <section id="missione" class="container mx-auto py-16">
-        <h2 class="text-3xl font-bold text-center mb-8">La Nostra Missione</h2>
-        <div class="grid md:grid-cols-2 gap-8">
+    <!-- Modello di Business -->
+    <section id="modello" class="container mx-auto py-16">
+        <h2 class="text-4xl font-bold text-center mb-12 text-almasicily-grey">Il Nostro Modello Innovativo</h2>
+        
+        <div class="grid md:grid-cols-2 gap-12">
             <div>
-                <h3 class="text-2xl font-semibold mb-4">Vision</h3>
+                <h3 class="text-2xl font-semibold mb-6 text-almasicily-green">Digitalizzazione e Internazionalizzazione delle PMI</h3>
+                <p class="mb-4">
+                    Supportiamo le piccole imprese agricole siciliane nella loro trasformazione digitale, 
+                    fornendo gli strumenti necessari per competere nel mercato globale.
+                </p>
+                <ul class="space-y-3 mb-6 list-disc pl-5">
+                    <li>Consulenza strategica per la digitalizzazione</li>
+                    <li>Supporto nell'export e nelle vendite internazionali</li>
+                    <li>Formazione su marketing digitale e e-commerce</li>
+                    <li>Accesso a piattaforme di vendita globali</li>
+                </ul>
                 <p>
-                    Potenziare le PMI agro-alimentari in Sicilia, 
-                    promuovendo pratiche sostenibili e artigianato. 
-                    Supportiamo i produttori locali riducendo lo spreco alimentare.
+                    Il nostro obiettivo è creare nuove opportunità di lavoro, 
+                    trattenendo i talenti siciliani e valorizzando il patrimonio agroalimentare.
                 </p>
             </div>
+            
             <div>
-                <h3 class="text-2xl font-semibold mb-4">Valori</h3>
-                <ul class="list-disc pl-5">
-                    <li>Lavoro duro e onestà</li>
-                    <li>Creatività e innovazione</li>
-                    <li>Sostegno al territorio</li>
-                    <li>Qualità dei prodotti</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Prodotti -->
-    <section id="prodotti" class="bg-gray-100 py-16">
-        <h2 class="text-3xl font-bold text-center mb-8">I Nostri Prodotti</h2>
-        <div class="container mx-auto grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded shadow">
-                <h3 class="text-xl font-semibold mb-4">Conserve</h3>
-                <p>Caponata, Passate, Sughi</p>
-            </div>
-            <div class="bg-white p-6 rounded shadow">
-                <h3 class="text-xl font-semibold mb-4">Patè</h3>
-                <p>Olive, Peperoncino, Finocchietto</p>
-            </div>
-            <div class="bg-white p-6 rounded shadow">
-                <h3 class="text-xl font-semibold mb-4">Olive</h3>
-                <p>Verdi, Condite, Sott'Olio</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contatti -->
-    <section id="contatti" class="container mx-auto py-16">
-        <h2 class="text-3xl font-bold text-center mb-8">Contattaci</h2>
-        <div class="max-w-md mx-auto">
-            <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-                <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2">Nome</label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3" type="text">
+                <h3 class="text-2xl font-semibold mb-6 text-almasicily-green">Modello di Vendita Diretta Rivoluzionario</h3>
+                <div class="bg-almasicily-light-green/20 p-6 rounded-lg">
+                    <h4 class="font-bold mb-4">Come Funziona</h4>
+                    <ol class="space-y-3 list-decimal pl-5">
+                        <li>
+                            <strong>Acquisto Diretto</strong>: Selezioniamo e acquistiamo direttamente dai piccoli produttori siciliani
+                        </li>
+                        <li>
+                            <strong>Eliminazione Intermediari</strong>: Rimuoviamo distributori, importatori ed esportatori tradizionali
+                        </li>
+                        <li>
+                            <strong>Vendita Diretta</strong>: Riforniamo direttamente enoteche, ristoranti e negozi gourmet in tutta Europa
+                        </li>
+                    </ol>
                 </div>
-                <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2">Email</label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3" type="email">
+                <div class="mt-6">
+                    <h4 class="font-bold mb-4">Vantaggi</h4>
+                    <ul class="space-y-2">
+                        <li>✓ Prezzi più competitivi</li>
+                        <li>✓ Maggior guadagno per i produttori</li>
+                        <li>✓ Qualità garantita</li>
+                        <li>✓ Riduzione dei costi logistici</li>
+                    </ul>
                 </div>
-                <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2">Messaggio</label>
-                    <textarea class="shadow appearance-none border rounded w-full py-2 px-3" rows="4"></textarea>
-                </div>
-                <button class="bg-green-600 text-white font-bold py-2 px-4 rounded">
-                    Invia Messaggio
-                </button>
-            </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-green-800 text-white py-8 text-center">
-        <p>&copy; 2025 Almasicily. Tutti i diritti riservati.</p>
-        <p>Via A. Diaz, 118 - 92024 Canicattì (AG)</p>
+    <footer class="bg-almasicily-grey text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Almasicily. Tutti i diritti riservati.</p>
+            <p>Via A. Diaz, 118 - 92024 Canicattì (AG)</p>
+        </div>
     </footer>
 </body>
 </html>
