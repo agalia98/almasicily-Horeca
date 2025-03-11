@@ -1,190 +1,115 @@
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Prodotti di qualità premium
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-6 h-6 text-almasicily-green mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Risparmi fino al 20% sui prodotti
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-6 h-6 text-almasicily-green mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Spedizione rapida e affidabile
-                        </li>
-                    </ul>
-                    <a href="#contatti" class="inline-block mt-8 bg-almasicily-green text-white px-8 py-3 rounded-full hover:bg-almasicily-dark-green">
-                        Richiedi Informazioni
-                    </a>
-                </div>
-                <div>
-                    <img src="/api/placeholder/500/400" alt="Soluzione Horeca" class="rounded-lg shadow-lg">
-                </div>
-            </div>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almasicily - Prodotti Siciliani</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- Intestazione -->
+    <header class="bg-green-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">Almasicily</div>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#missione">Missione</a></li>
+                    <li><a href="#prodotti">Prodotti</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
+
+    <!-- Home -->
+    <section id="home" class="bg-green-600 text-white py-16 text-center">
+        <h1 class="text-4xl font-bold mb-4">Potenziare le PMI Siciliane</h1>
+        <p class="text-xl mb-8">
+            Sosteniamo le piccole imprese siciliane, 
+            promuovendo l'artigianato e il cibo gourmet
+        </p>
+        <a href="#prodotti" class="bg-white text-green-800 px-6 py-3 rounded">
+            Scopri i Prodotti
+        </a>
     </section>
 
-    <!-- Chi Siamo -->
-    <section id="chi-siamo" class="container mx-auto py-16">
-        <h2 class="text-4xl font-bold text-center mb-12 text-almasicily-dark-green">La Nostra Storia</h2>
-        <div class="grid md:grid-cols-2 gap-10 items-center">
+    <!-- Missione -->
+    <section id="missione" class="container mx-auto py-16">
+        <h2 class="text-3xl font-bold text-center mb-8">La Nostra Missione</h2>
+        <div class="grid md:grid-cols-2 gap-8">
             <div>
-                <p class="mb-4">
-                    Almasicily nasce dall'amore per la terra siciliana e dalla passione per i suoi prodotti autentici. 
-                    Fondata nel 2018, la nostra azienda si dedica a valorizzare le piccole realtà produttive locali, 
-                    selezionando con cura i migliori prodotti dell'enogastronomia siciliana.
-                </p>
-                <p class="mb-4">
-                    Crediamo nel valore dell'artigianato, nella sostenibilità e nel rispetto delle tradizioni culinarie. 
-                    Ogni nostro prodotto racconta una storia di dedizione, qualità e amore per il cibo.
-                </p>
+                <h3 class="text-2xl font-semibold mb-4">Vision</h3>
                 <p>
-                    La nostra missione è portare i sapori genuini della Sicilia sulle tavole di tutto il mondo, 
-                    supportando al contempo le comunità locali e preservando le loro pratiche agricole tradizionali.
+                    Potenziare le PMI agro-alimentari in Sicilia, 
+                    promuovendo pratiche sostenibili e artigianato. 
+                    Supportiamo i produttori locali riducendo lo spreco alimentare.
                 </p>
             </div>
             <div>
-                <img src="/api/placeholder/500/400" alt="Almasicily Storia" class="rounded-lg shadow-lg">
+                <h3 class="text-2xl font-semibold mb-4">Valori</h3>
+                <ul class="list-disc pl-5">
+                    <li>Lavoro duro e onestà</li>
+                    <li>Creatività e innovazione</li>
+                    <li>Sostegno al territorio</li>
+                    <li>Qualità dei prodotti</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- Testimonianze -->
-    <section class="bg-gray-100 py-16">
-        <div class="container mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-12 text-almasicily-dark-green">Cosa Dicono di Noi</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <p class="italic mb-4">"Prodotti autentici che riportano i sapori della mia terra. Almasicily è come avere un pezzo di Sicilia a tavola."</p>
-                    <div class="flex items-center">
-                        <img src="/api/placeholder/50/50" alt="Cliente" class="rounded-full mr-4">
-                        <div>
-                            <h4 class="font-semibold">Marco R.</h4>
-                            <p class="text-sm text-gray-600">Ristoratore</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <p class="italic mb-4">"La qualità dei loro prodotti è incredibile. Ogni volta che uso le loro conserve, la mia cucina diventa speciale."</p>
-                    <div class="flex items-center">
-                        <img src="/api/placeholder/50/50" alt="Cliente" class="rounded-full mr-4">
-                        <div>
-                            <h4 class="font-semibold">Elena S.</h4>
-                            <p class="text-sm text-gray-600">Chef</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <p class="italic mb-4">"Finalmente un'azienda che valorizza i piccoli produttori siciliani. Complimenti!"</p>
-                    <div class="flex items-center">
-                        <img src="/api/placeholder/50/50" alt="Cliente" class="rounded-full mr-4">
-                        <div>
-                            <h4 class="font-semibold">Giovanni P.</h4>
-                            <p class="text-sm text-gray-600">Sommelier</p>
-                        </div>
-                    </div>
-                </div>
+    <!-- Prodotti -->
+    <section id="prodotti" class="bg-gray-100 py-16">
+        <h2 class="text-3xl font-bold text-center mb-8">I Nostri Prodotti</h2>
+        <div class="container mx-auto grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded shadow">
+                <h3 class="text-xl font-semibold mb-4">Conserve</h3>
+                <p>Caponata, Passate, Sughi</p>
+            </div>
+            <div class="bg-white p-6 rounded shadow">
+                <h3 class="text-xl font-semibold mb-4">Patè</h3>
+                <p>Olive, Peperoncino, Finocchietto</p>
+            </div>
+            <div class="bg-white p-6 rounded shadow">
+                <h3 class="text-xl font-semibold mb-4">Olive</h3>
+                <p>Verdi, Condite, Sott'Olio</p>
             </div>
         </div>
     </section>
 
     <!-- Contatti -->
     <section id="contatti" class="container mx-auto py-16">
-        <h2 class="text-4xl font-bold text-center mb-12 text-almasicily-dark-green">Contattaci</h2>
-        <div class="grid md:grid-cols-2 gap-10">
-            <div>
-                <form class="space-y-6">
-                    <div>
-                        <label class="block mb-2 font-semibold">Nome Completo</label>
-                        <input type="text" class="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-almasicily-green" placeholder="Il tuo nome">
-                    </div>
-                    <div>
-                        <label class="block mb-2 font-semibold">Email</label>
-                        <input type="email" class="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-almasicily-green" placeholder="La tua email">
-                    </div>
-                    <div>
-                        <label class="block mb-2 font-semibold">Telefono</label>
-                        <input type="tel" class="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-almasicily-green" placeholder="Numero di telefono">
-                    </div>
-                    <div>
-                        <label class="block mb-2 font-semibold">Messaggio</label>
-                        <textarea class="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-almasicily-green" rows="5" placeholder="Scrivi qui il tuo messaggio"></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-almasicily-green text-white p-3 rounded hover:bg-almasicily-dark-green transition duration-300">
-                        Invia Messaggio
-                    </button>
-                </form>
-            </div>
-            <div>
-                <div class="mb-8">
-                    <h3 class="text-2xl font-semibold mb-4">Contatti Diretti</h3>
-                    <p class="mb-2"><strong>Telefono:</strong> +39 339 2458190</p>
-                    <p class="mb-2"><strong>Email:</strong> info@almasicily.com</p>
-                    <p><strong>Indirizzo:</strong> Via A. Diaz, 118 - 92024 Canicattì (AG)</p>
+        <h2 class="text-3xl font-bold text-center mb-8">Contattaci</h2>
+        <div class="max-w-md mx-auto">
+            <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2">Nome</label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3" type="text">
                 </div>
-                <div>
-                    <h3 class="text-2xl font-semibold mb-4">Orari</h3>
-                    <p>Lunedì - Venerdì: 9:00 - 18:00</p>
-                    <p>Sabato: 9:00 - 13:00</p>
-                    <p>Domenica: Chiuso</p>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3" type="email">
                 </div>
-                <div class="mt-8">
-                    <img src="/api/placeholder/400/300" alt="Mappa" class="rounded-lg shadow-md">
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2">Messaggio</label>
+                    <textarea class="shadow appearance-none border rounded w-full py-2 px-3" rows="4"></textarea>
                 </div>
-            </div>
+                <button class="bg-green-600 text-white font-bold py-2 px-4 rounded">
+                    Invia Messaggio
+                </button>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-almasicily-dark-green text-white py-12">
-        <div class="container mx-auto grid md:grid-cols-3 gap-8">
-            <div>
-                <h4 class="text-xl font-semibold mb-4">Almasicily</h4>
-                <p>Valorizziamo le piccole imprese siciliane, promuovendo l'artigianato e il cibo gourmet</p>
-            </div>
-            <div>
-                <h4 class="text-xl font-semibold mb-4">Link Veloci</h4>
-                <ul class="space-y-2">
-                    <li><a href="#home" class="hover:text-almasicily-light-green">Home</a></li>
-                    <li><a href="#prodotti" class="hover:text-almasicily-light-green">Prodotti</a></li>
-                    <li><a href="#horeca" class="hover:text-almasicily-light-green">B2B Horeca</a></li>
-                    <li><a href="#chi-siamo" class="hover:text-almasicily-light-green">Chi Siamo</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-xl font-semibold mb-4">Seguici</h4>
-                <div class="flex space-x-4">
-                    <a href="#" class="hover:text-almasicily-light-green">Facebook</a>
-                    <a href="#" class="hover:text-almasicily-light-green">Instagram</a>
-                    <a href="#" class="hover:text-almasicily-light-green">LinkedIn</a>
-                </div>
-            </div>
-        </div>
-        <div class="text-center mt-8 border-t border-gray-700 pt-6">
-            <p>&copy; 2025 Almasicily. Tutti i diritti riservati.</p>
-            <p class="text-sm mt-2">P.IVA 02895410849 | REA AG-207607</p>
-        </div>
+    <footer class="bg-green-800 text-white py-8 text-center">
+        <p>&copy; 2025 Almasicily. Tutti i diritti riservati.</p>
+        <p>Via A. Diaz, 118 - 92024 Canicattì (AG)</p>
     </footer>
-
-    <!-- Script per funzionalità interattive -->
-    <script>
-        // Smooth scrolling per link interni
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Gestione form di contatto (da implementare lato backend)
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Funzionalità di invio in fase di sviluppo. Grazie per il tuo interesse!');
-        });
-    </script>
 </body>
 </html>
