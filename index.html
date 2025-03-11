@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Almasicily - Valorizzazione PMI Siciliane</title>
+    <title>Almasicily - Catalogo Completo</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -22,19 +22,35 @@
         body {
             font-family: 'Arial', sans-serif;
         }
+        .product-card {
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body class="text-almasicily-grey">
     <!-- Header -->
-    <header class="bg-white shadow-md">
+    <header class="bg-white shadow-md fixed w-full z-50">
         <div class="container mx-auto flex justify-between items-center p-4">
             <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgNTAiIHdpZHRoPSIyMDAiIGhlaWdodD0iNTAiPgogICAgPHRleHQgeD0iMCIgeT0iMzUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzNSIgZmlsbD0iIzRhNGE0YSI+YWxtYXNpY2lseTwvdGV4dD4KICAgIDxjaXJjbGUgY3g9IjE4MCIgY3k9IjI1IiByPSI1IiBmaWxsPSIjOGJjMzRhIj48L2NpcmNsZT4KPC9zdmc+" alt="Almasicily Logo" class="h-10">
             <nav>
                 <ul class="flex space-x-6">
                     <li><a href="#home" class="hover:text-almasicily-green">Home</a></li>
                     <li><a href="#missione" class="hover:text-almasicily-green">Missione</a></li>
-                    <li><a href="#modello" class="hover:text-almasicily-green">Modello di Business</a></li>
-                    <li><a href="#prodotti" class="hover:text-almasicily-green">Prodotti</a></li>
+                    <li><a href="#modello" class="hover:text-almasicily-green">Modello</a></li>
+                    <li class="relative group">
+                        <a href="#prodotti" class="hover:text-almasicily-green">Prodotti</a>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg p-4 mt-2 w-64">
+                            <h4 class="font-bold mb-2">Categorie</h4>
+                            <ul>
+                                <li><a href="#conserve" class="block py-1 hover:bg-almasicily-light-green">Conserve</a></li>
+                                <li><a href="#pate" class="block py-1 hover:bg-almasicily-light-green">Patè</a></li>
+                                <li><a href="#olive" class="block py-1 hover:bg-almasicily-light-green">Olive e Condimenti</a></li>
+                            </ul>
+                        </div>
+                    </li>
                     <li><a href="#contatti" class="hover:text-almasicily-green">Contatti</a></li>
                 </ul>
             </nav>
@@ -42,7 +58,7 @@
     </header>
 
     <!-- Home Section -->
-    <section id="home" class="bg-gradient-to-r from-almasicily-light-green to-white py-16">
+    <section id="home" class="bg-gradient-to-r from-almasicily-light-green to-white py-24 mt-16">
         <div class="container mx-auto text-center">
             <h1 class="text-4xl font-bold mb-6 text-almasicily-grey">Rivoluzionare l'Economia delle PMI Siciliane</h1>
             <p class="text-xl max-w-3xl mx-auto mb-10">
@@ -54,195 +70,171 @@
                     Scopri il Nostro Modello
                 </a>
                 <a href="#prodotti" class="border-2 border-almasicily-green text-almasicily-grey px-8 py-3 rounded-full hover:bg-almasicily-light-green transition">
-                    Catalogo Prodotti
+                    Catalogo Completo
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Modello di Business -->
-    <section id="modello" class="container mx-auto py-16">
-        <h2 class="text-4xl font-bold text-center mb-12 text-almasicily-grey">Il Nostro Modello Innovativo</h2>
-        
-        <div class="grid md:grid-cols-2 gap-12">
-            <div>
-                <h3 class="text-2xl font-semibold mb-6 text-almasicily-green">Digitalizzazione e Internazionalizzazione delle PMI</h3>
-                <p class="mb-4">
-                    Supportiamo le piccole imprese agricole siciliane nella loro trasformazione digitale, 
-                    fornendo gli strumenti necessari per competere nel mercato globale.
-                </p>
-                <ul class="space-y-3 mb-6 list-disc pl-5">
-                    <li>Consulenza strategica per la digitalizzazione</li>
-                    <li>Supporto nell'export e nelle vendite internazionali</li>
-                    <li>Formazione su marketing digitale e e-commerce</li>
-                    <li>Accesso a piattaforme di vendita globali</li>
-                </ul>
-                <p>
-                    Il nostro obiettivo è creare nuove opportunità di lavoro, 
-                    trattenendo i talenti siciliani e valorizzando il patrimonio agroalimentare.
-                </p>
-            </div>
-            
-            <div>
-                <h3 class="text-2xl font-semibold mb-6 text-almasicily-green">Modello di Vendita Diretta Rivoluzionario</h3>
-                <div class="bg-almasicily-light-green/20 p-6 rounded-lg">
-                    <h4 class="font-bold mb-4">Come Funziona</h4>
-                    <ol class="space-y-3 list-decimal pl-5">
-                        <li>
-                            <strong>Acquisto Diretto</strong>: Selezioniamo e acquistiamo direttamente dai piccoli produttori siciliani
-                        </li>
-                        <li>
-                            <strong>Eliminazione Intermediari</strong>: Rimuoviamo distributori, importatori ed esportatori tradizionali
-                        </li>
-                        <li>
-                            <strong>Vendita Diretta</strong>: Riforniamo direttamente enoteche, ristoranti e negozi gourmet in tutta Europa
-                        </li>
-                    </ol>
-                </div>
-                <div class="mt-6">
-                    <h4 class="font-bold mb-4">Vantaggi</h4>
-                    <ul class="space-y-2">
-                        <li>✓ Prezzi più competitivi</li>
-                        <li>✓ Maggior guadagno per i produttori</li>
-                        <li>✓ Qualità garantita</li>
-                        <li>✓ Riduzione dei costi logistici</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Catalogo Prodotti -->
+    <!-- Catalogo Prodotti Completo -->
     <section id="prodotti" class="container mx-auto py-16">
-        <h2 class="text-4xl font-bold text-center mb-12 text-almasicily-grey">Il Nostro Catalogo</h2>
+        <h2 class="text-4xl font-bold text-center mb-12 text-almasicily-grey">Catalogo Prodotti Completo</h2>
         
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- Conserve -->
-            <div class="bg-white shadow-lg rounded-lg p-6">
-                <h3 class="text-2xl font-semibold mb-4 text-almasicily-green">Conserve</h3>
-                <div class="space-y-3">
-                    <div>
-                        <h4 class="font-bold">Caponata di Melanzane</h4>
-                        <p class="text-sm">Contorno tipico siciliano</p>
-                        <ul class="text-sm list-disc pl-5">
-                            <li>Formati: 190g, 280g, 500g, 1kg, 3kg</li>
-                            <li>Shelf life: 36 mesi</li>
+        <!-- Conserve -->
+        <div id="conserve" class="mb-16">
+            <h3 class="text-3xl font-semibold mb-8 text-almasicily-green">Conserve</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white shadow-lg rounded-lg p-6 product-card">
+                    <h4 class="text-2xl font-bold mb-4">Caponata di Melanzane</h4>
+                    <p class="mb-4">Tipico contorno siciliano con melanzane, olive e capperi</p>
+                    <div class="bg-almasicily-light-green/20 p-4 rounded">
+                        <h5 class="font-bold mb-2">Ingredienti</h5>
+                        <ul class="list-disc pl-5 text-sm">
+                            <li>Melanzane</li>
+                            <li>Concentrato di pomodoro</li>
+                            <li>Sedano, Cipolla</li>
+                            <li>Olive, Capperi</li>
+                            <li>Olio extravergine</li>
                         </ul>
                     </div>
-                    <div>
-                        <h4 class="font-bold">Caponata di Carciofi</h4>
-                        <p class="text-sm">Variante invernale della caponata</p>
-                        <ul class="text-sm list-disc pl-5">
-                            <li>Formati: 1kg, 3kg</li>
-                            <li>Shelf life: 36 mesi</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="font-bold">Passata di Pomodoro</h4>
-                        <p class="text-sm">Passata artigianale da pomodori siciliani</p>
-                        <ul class="text-sm list-disc pl-5">
-                            <li>Formati: 420g, 690g</li>
-                            <li>Shelf life: 36 mesi</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Patè -->
-            <div class="bg-white shadow-lg rounded-lg p-6">
-                <h3 class="text-2xl font-semibold mb-4 text-almasicily-green">Patè</h3>
-                <div class="space-y-3">
-                    <div>
-                        <h4 class="font-bold">Patè di Olive Verdi</h4>
-                        <p class="text-sm">Cremoso patè mediterraneo</p>
-                        <ul class="text-sm list-disc pl-5">
-                            <li>Formati: 90g, 500g, 1kg</li>
-                            <li>Ingredienti naturali</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="font-bold">Patè di Peperoncino</h4>
-                        <p class="text-sm">Per amanti dei sapori decisi</p>
-                        <ul class="text-sm list-disc pl-5">
-                            <li>Formati: 90g, 500g, 1kg</li>
-                            <li>Piccantezza regolata</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="font-bold">Patè di Finocchietto</h4>
-                        <p class="text-sm">Sapore tipicamente siciliano</p>
-                        <ul class="text-sm list-disc pl-5">
-                            <li>Formati: 90g, 500g, 1kg</li>
-                            <li>100% ingredienti locali</li>
+                    <div class="mt-4">
+                        <h5 class="font-bold mb-2">Formati Disponibili</h5>
+                        <ul class="text-sm">
+                            <li>Vaso 190g</li>
+                            <li>Vaso 280g</li>
+                            <li>Vaso 500g</li>
+                            <li>Vaso 1kg</li>
+                            <li>Vaso 3kg</li>
                         </ul>
                     </div>
                 </div>
-            </div>
 
-            <!-- Olive -->
-            <div class="bg-white shadow-lg rounded-lg p-6">
-                <h3 class="text-2xl font-semibold mb-4 text-almasicily-green">Olive e Condimenti</h3>
-                <div class="space-y-3">
-                    <div>
-                        <h4 class="font-bold">Olive Verdi Marinate</h4>
-                        <p class="text-sm">Tradizione gastronomica siciliana</p>
-                        <ul class="text-sm list-disc pl-5">
-                            <li>Formato: 2,5kg</li>
-                            <li>Marinatura artigianale</li>
+                <div class="bg-white shadow-lg rounded-lg p-6 product-card">
+                    <h4 class="text-2xl font-bold mb-4">Caponata di Carciofi</h4>
+                    <p class="mb-4">Variante invernale della caponata con carciofi</p>
+                    <div class="bg-almasicily-light-green/20 p-4 rounded">
+                        <h5 class="font-bold mb-2">Ingredienti</h5>
+                        <ul class="list-disc pl-5 text-sm">
+                            <li>Carciofi</li>
+                            <li>Concentrato di pomodoro</li>
+                            <li>Sedano, Cipolla</li>
+                            <li>Olive, Capperi</li>
+                            <li>Olio extravergine</li>
                         </ul>
                     </div>
-                    <div>
-                        <h4 class="font-bold">Carciofi Sott'Olio</h4>
-                        <p class="text-sm">Conservazione artigianale</p>
-                        <ul class="text-sm list-disc pl-5">
-                            <li>Formati: 1kg, 3kg</li>
-                            <li>Lavorazione tradizionale</li>
+                    <div class="mt-4">
+                        <h5 class="font-bold mb-2">Formati Disponibili</h5>
+                        <ul class="text-sm">
+                            <li>Vaso 1kg</li>
+                            <li>Vaso 3kg</li>
                         </ul>
                     </div>
-                    <div>
-                        <h4 class="font-bold">Condimenti Speciali</h4>
-                        <p class="text-sm">Sughi e condimenti tipici</p>
-                        <ul class="text-sm list-disc pl-5">
-                            <li>Sugo al Basilico</li>
-                            <li>Sugo alla Norma</li>
-                            <li>Sugo alla Marinara</li>
+                </div>
+
+                <div class="bg-white shadow-lg rounded-lg p-6 product-card">
+                    <h4 class="text-2xl font-bold mb-4">Passata di Pomodoro</h4>
+                    <p class="mb-4">Passata artigianale da pomodori siciliani</p>
+                    <div class="bg-almasicily-light-green/20 p-4 rounded">
+                        <h5 class="font-bold mb-2">Ingredienti</h5>
+                        <ul class="list-disc pl-5 text-sm">
+                            <li>Pomodoro</li>
+                            <li>Sale</li>
+                        </ul>
+                    </div>
+                    <div class="mt-4">
+                        <h5 class="font-bold mb-2">Formati Disponibili</h5>
+                        <ul class="text-sm">
+                            <li>Bottiglia 420g</li>
+                            <li>Bottiglia 690g</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Contatti -->
-    <section id="contatti" class="container mx-auto py-16 bg-almasicily-light-green/20">
-        <h2 class="text-4xl font-bold text-center mb-12 text-almasicily-grey">Contattaci</h2>
-        <div class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-md">
-            <form class="space-y-6">
-                <div>
-                    <label class="block mb-2 text-almasicily-grey">Nome Completo</label>
-                    <input type="text" class="w-full p-3 border rounded focus:ring-2 focus:ring-almasicily-green" placeholder="Il tuo nome">
+        <!-- Patè -->
+        <div id="pate" class="mb-16">
+            <h3 class="text-3xl font-semibold mb-8 text-almasicily-green">Patè</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white shadow-lg rounded-lg p-6 product-card">
+                    <h4 class="text-2xl font-bold mb-4">Patè di Olive Verdi</h4>
+                    <p class="mb-4">Cremoso patè con olive verdi e aromi mediterranei</p>
+                    <div class="bg-almasicily-light-green/20 p-4 rounded">
+                        <h5 class="font-bold mb-2">Ingredienti</h5>
+                        <ul class="list-disc pl-5 text-sm">
+                            <li>Olive verdi</li>
+                            <li>Olio di semi di girasole</li>
+                            <li>Olio extravergine</li>
+                            <li>Aceto di vino</li>
+                            <li>Aromi mediterranei</li>
+                        </ul>
+                    </div>
+                    <div class="mt-4">
+                        <h5 class="font-bold mb-2">Formati Disponibili</h5>
+                        <ul class="text-sm">
+                            <li>Vaso 90g</li>
+                            <li>Vaso 500g</li>
+                            <li>Vaso 1kg</li>
+                        </ul>
+                    </div>
                 </div>
-                <div>
-                    <label class="block mb-2 text-almasicily-grey">Email</label>
-                    <input type="email" class="w-full p-3 border rounded focus:ring-2 focus:ring-almasicily-green" placeholder="La tua email">
-                </div>
-                <div>
-                    <label class="block mb-2 text-almasicily-grey">Messaggio</label>
-                    <textarea class="w-full p-3 border rounded focus:ring-2 focus:ring-almasicily-green" rows="5" placeholder="Scrivi qui il tuo messaggio"></textarea>
-                </div>
-                <button type="submit" class="w-full bg-almasicily-green text-white p-3 rounded hover:bg-green-600 transition">
-                    Invia Messaggio
-                </button>
-            </form>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-almasicily-grey text-white py-8">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2025 Almasicily. Tutti i diritti riservati.</p>
-            <p>Via A. Diaz, 118 - 92024 Canicattì (AG)</p>
+                <div class="bg-white shadow-lg rounded-lg p-6 product-card">
+                    <h4 class="text-2xl font-bold mb-4">Patè di Peperoncino</h4>
+                    <p class="mb-4">Patè piccante per amanti dei sapori decisi</p>
+                    <div class="bg-almasicily-light-green/20 p-4 rounded">
+                        <h5 class="font-bold mb-2">Ingredienti</h5>
+                        <ul class="list-disc pl-5 text-sm">
+                            <li>Pomodori secchi</li>
+                            <li>Olio di semi di girasole</li>
+                            <li>Peperoncino</li>
+                            <li>Aglio</li>
+                            <li>Erbe aromatiche</li>
+                        </ul>
+                    </div>
+                    <div class="mt-4">
+                        <h5 class="font-bold mb-2">Formati Disponibili</h5>
+                        <ul class="text-sm">
+                            <li>Vaso 90g</li>
+                            <li>Vaso 500g</li>
+                            <li>Vaso 1kg</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white shadow-lg rounded-lg p-6 product-card">
+                    <h4 class="text-2xl font-bold mb-4">Patè di Finocchietto</h4>
+                    <p class="mb-4">Specialità con finocchietto selvatico siciliano</p>
+                    <div class="bg-almasicily-light-green/20 p-4 rounded">
+                        <h5 class="font-bold mb-2">Ingredienti</h5>
+                        <ul class="list-disc pl-5 text-sm">
+                            <li>Finocchietto selvatico</li>
+                            <li>Mandorle</li>
+                            <li>Olio extravergine</li>
+                            <li>Aglio</li>
+                            <li>Aromi mediterranei</li>
+                        </ul>
+                    </div>
+                    <div class="mt-4">
+                        <h5 class="font-bold mb-2">Formati Disponibili</h5>
+                        <ul class="text-sm">
+                            <li>Vaso 90g</li>
+                            <li>Vaso 500g</li>
+                            <li>Vaso 1kg</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
-</body>
-</html>
+
+        <!-- Olive e Condimenti -->
+        <div id="olive" class="mb-16">
+            <h3 class="text-3xl font-semibold mb-8 text-almasicily-green">Olive e Condimenti</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white shadow-lg rounded-lg p-6 product-card">
+                    <h4 class="text-2xl font-bold mb-4">Olive Verdi Marinate</h4>
+                    <p class="mb-4">Tradizionale preparazione gastronomica siciliana</p>
+                    <div class="bg-almasicily-light-green/20 p-4 rounded">
+                        <h5 class="font-bold mb-2">Ingredienti</h5>
+                        <ul class="list-disc pl-5 text-sm">
+                            <li>Olive ver
