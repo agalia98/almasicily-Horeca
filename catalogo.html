@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlmaSicily B2B - Catalogo Prodotti</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Stili specifici per il catalogo */
+        .catalog-filters {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .filter-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .filter-group h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+        }
+        
+        .filter-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .filter-checkbox input {
+            cursor: pointer;
+        }
+        
+        .filter-checkbox label {
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+        
+        .catalog-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .catalog-count {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        .view-options {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .view-btn {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .view-btn.active {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .catalog-container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 2rem;
+        }
+        
+        .catalog-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+        
+        .product-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-category {
+            font-size: 0.8rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-title {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .product-price {
+            font-weight: 700;
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+        
+        .product-btn {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        
+        .product-btn:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        @media (max-width: 992px) {
+            .catalog-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .catalog-filters {
+                position: sticky;
+                top: 80px;
+                z-index: 100;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header (uguale per tutte le pagine) -->
+    <header class="header">
+        <!-- Contenuto dell'header uguale al template -->
+        <!-- ... -->
+    </header>
+    
+    <!-- Contenuto Principale del Catalogo -->
+    <main>
+        <div class="container" style="padding: 2rem 0;">
+            <div class="section-title">
+                <h2>Catalogo Prodotti</h2>
+                <p>Esplora la nostra vasta gamma di prodotti d'eccellenza siciliana, selezionati per soddisfare le esigenze dei professionisti HORECA più esigenti.</p>
+            </div>
+            
+            <div class="catalog-container">
+                <aside class="catalog-sidebar">
+                    <div class="catalog-filters">
+                        <h3>Filtri</h3>
+                        
+                        <div class="filter-group">
+                            <h3>Categorie</h3>
+                            <div class="filter-options">
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="cat-conserve">
+                                    <label for="cat-conserve">Conserve</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="cat-salse">
+                                    <label for="cat-salse">Salse e Condimenti</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="cat-sottolio">
+                                    <label for="cat-sottolio">Prodotti Sott'olio</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="cat-formaggi">
+                                    <label for="cat-formaggi">Formaggi</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="cat-salumi">
+                                    <label for="cat-salumi">Salumi</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h3>Certificazioni</h3>
+                            <div class="filter-options">
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="cert-bio">
+                                    <label for="cert-bio">Biologico</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="cert-dop">
+                                    <label for="cert-dop">DOP</label>
+                                </div>
+                                <div class="filter-checkbox">
+                                    <input type="checkbox" id="cert-igp">
+                                    <label for="cert-igp">IGP</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <h3>Prezzo</h3>
+                            <div class="filter-options">
+                                <input type="range" min="0" max="100" value="50">
+                                <div style="display: flex; justify-content: space-between; margin-top: 0.5rem;">
+                                    <span>€0</span>
+                                    <span>€100+</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-primary" style="width: 100%;">Applica Filtri</button>
+                    </div>
+                </aside>
+                
+                <div class="catalog-main">
+                    <div class="catalog-header">
+                        <div class="catalog-count">Mostra 1-12 di 48 prodotti</div>
+                        <div class="view-options">
+                            <button class="view-btn active"><i class="fas fa-th"></i></button>
+                            <button class="view-btn"><i class="fas fa-list"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="catalog-content">
+                        <!-- Prodotto 1 -->
+                        <div class="product-card">
+                            <img src="images/products/pomodoro-ciliegino.jpg" alt="Pomodoro Ciliegino">
+                            <div class="product-info">
+                                <div class="product-category">Conserve</div>
+                                <h3 class="product-title">Pomodoro Ciliegino di Pachino IGP in Salsa</h3>
+                                <div class="product-meta">
+                                    <div class="product-price">€24.90</div>
+                                    <a href="prodotto-pomodoro-ciliegino.html" class="product-btn">Dettagli</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Prodotto 2 -->
+                        <div class="product-card">
+                            <img src="images/products/olio-nocellara.jpg" alt="Olio Nocellara">
+                            <div class="product-info">
+                                <div class="product-category">Condimenti</div>
+                                <h3 class="product-title">Olio Extra Vergine d'Oliva Biologico Nocellara</h3>
+                                <div class="product-meta">
+                                    <div class="product-price">€19.50</div>
+                                    <a href="prodotto-olio-nocellara.html" class="product-btn">Dettagli</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Prodotto 3 -->
+                        <div class="product-card">
+                            <img src="images/products/pesto-pistacchio.jpg" alt="Pesto di Pistacchio">
+                            <div class="product-info">
+                                <div class="product-category">Salse</div>
+                                <h3 class="product-title">Pesto di Pistacchio di Bronte DOP</h3>
+                                <div class="product-meta">
+                                    <div class="product-price">€32.80</div>
+                                    <a href="prodotto-pesto-pistacchio.html" class="product-btn">Dettagli</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Aggiungi altri prodotti qui -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer (uguale per tutte le pagine) -->
+    <footer class="footer">
+        <!-- Contenuto del footer uguale al template -->
+        <!-- ... -->
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
